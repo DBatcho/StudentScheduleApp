@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971proj.Views.CourseEdit"
+             Title="Edit/Delete Course">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" x:Name="SaveCourse" Clicked="SaveCourse_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Delete" x:Name="DeleteCourse" Clicked="DeleteCourse_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Padding="5" ColumnSpacing="1" BackgroundColor="WhiteSmoke">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Title -->
+                    <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Title
+                    </Label>
+                    <Entry
+                    Text="{Binding Title}"
+                    x:Name="Title"
+                    Placeholder="Enter Course Name"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center">
+                    </Entry>
+
+                    <!-- StartDate -->
+                    <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        StartDate
+                    </Label>
+                    <DatePicker
+                    x:Name="StartDate"
+                    Grid.Row="1"
+                    Grid.Column="1">
+                    </DatePicker>
+
+                    <!-- EndDate -->
+                    <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        End Date
+                    </Label>
+                    <DatePicker
+                    x:Name="EndDate"
+                    Grid.Row="2"
+                    Grid.Column="1">
+                    </DatePicker>
+
+                    <!-- Course Objectives Title -->
+                    <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    FontSize="Title"
+                    VerticalTextAlignment="Start">
+                        Course Objectives
+                    </Label>
+
+                    <!-- Obj Assessment -->
+                    <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Objective Assessment
+                    </Label>
+                    <Entry
+                    Text="{Binding Obj1}"
+                    x:Name="Obj1"
+                    Placeholder="Enter Course Objective Assessment"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center">
+                    </Entry>
+
+                    <!-- Obj1_DueDate-->
+                    <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Objective 1 Due Date
+                    </Label>
+                    <DatePicker
+                    x:Name="Obj1_DueDate"
+                    Grid.Row="5"
+                    Grid.Column="1">
+                    </DatePicker>
+
+                    <!-- Performance Assessment -->
+                    <Label
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Performance Assessment
+                    </Label>
+                    <Entry
+                    Text="{Binding Obj2}"
+                    x:Name="Obj2"
+                    Placeholder="Enter Course Performance Assessment"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center">
+                    </Entry>
+
+                    <!-- Obj1_DueDate-->
+                    <Label
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Objective 2 Due Date
+                    </Label>
+                    <DatePicker
+                    x:Name="Obj2_DueDate"
+                    Grid.Row="7"
+                    Grid.Column="1">
+                    </DatePicker>
+
+                    <!-- Status -->
+                    <Label
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Status
+                    </Label>
+                    <Picker
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    FontSize="Medium"
+                    x:Name="Status"
+                    Title="Course Status">
+                        <Picker.Items>
+                            <x:String>in progress</x:String>
+                            <x:String>completed</x:String>
+                            <x:String>dropped</x:String>
+                            <x:String>plan to take</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <!-- Set Alerts Title -->
+                    <Label
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    FontSize="Title"
+                    VerticalTextAlignment="Start">
+                        Set Alerts
+                    </Label>
+
+                    <!-- AlertSE -->
+                    <Label
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Start/End Alert
+                    </Label>
+                    <CheckBox
+                    x:Name="AlertSE"
+                    IsChecked="False"
+                    Grid.Row="10"
+                    Grid.Column="1">
+                    </CheckBox>
+
+                    <!-- AlertObj -->
+                    <Label
+                    Grid.Row="11"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Objective Alert
+                    </Label>
+                    <CheckBox
+                    x:Name="AlertObj"
+                    IsChecked="False"
+                    Grid.Row="11"
+                    Grid.Column="1">
+                    </CheckBox>
+
+                    <!-- Optional Notes -->
+                    <Label
+                    Grid.Row="12"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Optional Notes
+                    </Label>
+                    <Entry
+                    Text="{Binding OptionalNotes}"
+                    x:Name="OptionalNotes"
+                    Placeholder="Enter Optional Notes"
+                    Grid.Row="12"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center">
+                    </Entry>
+
+                </Grid>
+                
+                <!-- Share Notes -->
+                <Button x:Name="ShareNotes" Text="Share Notes" Clicked="ShareNotes_Clicked"></Button>
+
+                <Grid Padding="5" ColumnSpacing="1" BackgroundColor="WhiteSmoke">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- CI Title -->
+                    <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="Title"
+                    VerticalTextAlignment="Start">
+                        Course Instructor
+                    </Label>
+
+                    <!-- CI_Name -->
+                    <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Course Instructor Name
+                    </Label>
+                    <Entry
+                    Text="{Binding CI_Name}"
+                    x:Name="CI_Name"
+                    Placeholder="Enter Course Instructor Name"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center">
+                    </Entry>
+
+                    <!-- CI_Phone -->
+                    <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Course Instructor Phone
+                    </Label>
+                    <Entry
+                    Text="{Binding CI_Phone}"
+                    x:Name="CI_Phone"
+                    Placeholder="Enter Course Instructor Phone"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center">
+                    </Entry>
+
+                    <!-- CI_Email -->
+                    <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                        Course Instructor Email
+                    </Label>
+                    <Entry
+                    Text="{Binding CI_Email}"
+                    x:Name="CI_Email"
+                    Placeholder="Enter Course Instructor Email"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center">
+                    </Entry>
+
+                </Grid>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

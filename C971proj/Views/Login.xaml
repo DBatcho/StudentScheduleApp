@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971proj.Views.Login"
+             Title="Student Login"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="5" RowSpacing="1" ColumnSpacing="22" BackgroundColor="WhiteSmoke">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Bold">
+                    Username
+                </Label>
+                <Entry
+                    Text="{Binding UserName}"
+                    x:Name="Username"
+                    Placeholder="Enter Username..."
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center"/>
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Bold">
+                    Password
+                </Label>
+                <Entry
+                    Text="{Binding Password}"
+                    x:Name="Password"
+                    IsPassword="True"
+                    Placeholder="Enter Password..."
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center"/>
+                
+            </Grid>
+            <Button x:Name="Submit" Text="Submit" Clicked="Submit_Clicked" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

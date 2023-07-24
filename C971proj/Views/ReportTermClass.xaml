@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971proj.Views.ReportTermClass"
+             Title="Term Choice for Report">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center">
+                Term
+            </Label>
+            <Picker
+                FontSize="Medium"
+                x:Name="TermChoice"
+                Title="Choose Term"
+                TitleColor="Red">
+            </Picker>
+
+            <Button x:Name="SubmitTerm" Text="Submit" Clicked="SubmitTerm_Clicked" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

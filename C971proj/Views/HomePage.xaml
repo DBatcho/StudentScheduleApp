@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971proj.Views.HomePage"
+             Title="Home Page"
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <Label Text="Welcome" FontSize="Medium"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Settings" Text="Settings" Clicked="Settings_Clicked"/>
+        <ToolbarItem x:Name="Logout" Text="Logout" Clicked="Logout_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                x:Name="StudentName"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Button x:Name="ViewTerm" Text="View Term(s)" Clicked="ViewTerm_Clicked" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button x:Name="Reports" Text="Reports" Clicked="Reports_Clicked" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

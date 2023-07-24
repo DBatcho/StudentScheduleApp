@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971proj.Views.Report"
+             Title="Report(s)">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="TermsClasses" Text="Classes in a Choosen Term" Clicked="TermsClasses_Clicked" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+            <!--<Button x:Name="AllTermClasses" Text="All Terms/Classes" Clicked="AllTermClasses_Clicked" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center"></Button>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
